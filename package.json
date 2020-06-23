@@ -1,0 +1,94 @@
+{
+  "name": "barber-x-be-api",
+  "version": "0.3.0",
+  "description": "A custom MEAN stack boilerplate for web application ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-inspector & nodemon --inspect server.js",
+    "start-prod": "node server.js",
+    "seed": "node ./app/commands/seed $8",
+    "lint": "eslint app -c .eslintrc.json",
+    "lint-quiet": "eslint app -c .eslintrc.json --quiet",
+    "lint-fix": "eslint app -c .eslintrc.json --fix",
+    "lint-fix-dry": "eslint app -c .eslintrc.json --fix-dry-run",
+    "lint-fix-quiet": "./node_modules/.bin/eslint app -c .eslintrc.json --fix --quiet",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\"",
+    "lint-staged": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sridharrajs/nodejs-api-boilerplate.git"
+  },
+  "engines": {
+    "node": "13.x"
+  },
+  "author": "sridhar <sridhar@aghenam.com>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/sridharrajs/nodejs-api-boilerplate/issues"
+  },
+  "homepage": "https://github.com/sridharrajs/nodejs-api-boilerplate#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.2",
+    "gulp-jshint": "^2.1.0",
+    "lint-staged": "^9.4.2",
+    "nodemon": "^1.18.3",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "run-sequence": "^1.1.5"
+  },
+  "dependencies": {
+    "async": "^1.5.1",
+    "axios": "^0.19.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.5",
+    "body-parser": "^1.14.2",
+    "chalk": "^1.1.1",
+    "compress": "^0.99.0",
+    "compression": "^1.6.0",
+    "connect": "^3.4.0",
+    "cors": "^2.7.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.13.3",
+    "express-validator": "^5.1.2",
+    "generate-password": "^1.4.0",
+    "hash-sum": "^2.0.0",
+    "helmet": "^1.1.0",
+    "is-valid-email": "0.0.2",
+    "jwt-simple": "^0.4.0",
+    "lodash": "^4.17.5",
+    "moment": "^2.24.0",
+    "mongoose": "^5.5.10",
+    "node-uuid": "^1.4.8",
+    "require-dir": "^0.3.1",
+    "response-time": "^2.3.2",
+    "uniqid": "^5.0.3",
+    "uuid": "^3.2.1",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.9.0"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "pre-commit": [
+    "lint-staged"
+  ]
+}
