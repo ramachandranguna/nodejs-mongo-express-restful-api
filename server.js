@@ -5,7 +5,6 @@
 const chalk = require('chalk')
 const dotenv = require('dotenv').config()
 const config = require('./config')
-require('module-alias/register')
 
 const args = process.argv.slice(2)
 
