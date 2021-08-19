@@ -10,7 +10,7 @@ const accountSchema = new Schema(
   {
     type: {
       trim: true,
-      enum: ['local', 'facebook', 'google', 'twitter', 'github'], //Login Type default to "local"
+      enum: ['local', 'facebook', 'google', 'twitter', 'github'], // Login Type default to "local"
       type: String,
     },
     hash: {
@@ -70,8 +70,7 @@ const schema = new Schema(
     type: {
       type: String,
       required: true,
-      enum: ['user'], //User Model
-      //In future, you could get another set of users like storeOwners. The auth is seperated into a module to isolate the common functionality.
+      enum: ['user'], // Some Other user types if any, for now only users.
     },
     email_alias: {
       type: String,
