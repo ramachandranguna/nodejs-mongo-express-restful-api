@@ -68,7 +68,7 @@
     "express-validator": "^5.1.2",
     "generate-password": "^1.6.1",
     "hash-sum": "^2.0.0",
-    "helmet": "^1.1.0",
+    "helmet": "^6.0.1",
     "is-valid-email": "0.0.2",
     "jwt-simple": "^0.5.3",
     "lodash": "^4.17.21",
